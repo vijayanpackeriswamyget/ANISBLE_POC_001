@@ -1,66 +1,5 @@
 # Ansible tutorial
 
-This tutorial presents Ansible step-by-step. You'll need to have a (virtual or
-physical) machine to act as an Ansible node. A Vagrant environment is provided for 
-going through this tutorial.
-
-Ansible is a configuration management software that lets you control and
-configure nodes from another machine. What makes it different from other
-management software is that Ansible uses (potentially existing) SSH
-infrastructure, while others (Chef, Puppet, ...) need a specific PKI
-infrastructure to be set up.
-
-Ansible also emphasizes push mode, where configuration is pushed from a master
-machine (a master machine is only a machine where you can SSH to nodes from) to
-nodes, while most other CM typically do it the other way around (nodes pull
-their config at times from a master machine).
-
-This mode is really interesting since you do not need to have a 'publicly'
-accessible 'master' to be able to configure remote nodes: it's the nodes
-that need to be accessible (we'll see later that 'hidden' nodes can pull their
-configuration too!), and most of the time they are.
-
-This tutorial has been tested with **Ansible 2.7.1**.
-
-We're also assuming you have a keypair in your ~/.ssh directory.
-
-## Quick start
-
-- install Vagrant if you don't have it
-- install ansible (preferably 2.7.1 and using pip+virtualenv)
-- `vagrant up`
-- goto [step-00](./step-00/README.md)
-
-## Complete explanations
-
-### Installing Ansible
-
-The reference is the [installation
-guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html),
-but I strongly recommend the [Using pip & virtualenv (higly recommended
-!)](#using-pip--virtualenv-higly-recommended-) method.
-
-#### Using pip & virtualenv (higly recommended !)
-
-The best way to install Ansible (by far) is to use `pip` and virtual
-environments.
-
-Using virtualenv will let you have multiple Ansible versions
-installed side by side, and test upgrades or use different versions in
-different projects. Also, by using a virtualenv, you won't pollute your
-system's python installation.
-
-Check
-[virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
-for this. It makes managing virtualenvs very easy.
-
-Under Ubuntu, installing virtualenv & virtualenvwrapper can be done like
-so:
-
-```bash
-sudo apt-get install python-virtualenv virtualenvwrapper python-pip
-exec $SHELL
-```
 
 You can then create a virtualenv:
 
@@ -196,7 +135,7 @@ Just in case you want to skip to a specific step, here is a topic table of conte
 ## Contributing
 
 Thanks to all people who have contributed to this tutorial:
-
+* [Lecous ](https://github.com/leucos/ansible-tuto )
 * [Aladin Jaermann](http://github.com/oxyrox)
 * [Alexis Gallagher](https://github.com/algal)
 * [Alice Ferrazzi](https://github.com/aliceinwire)
